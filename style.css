@@ -1,0 +1,154 @@
+/* Men-disabled spinners pada input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    height: 60px;
+    background: linear-gradient(#111e27, #2a6190);
+    box-shadow: 2px 2px 12px #111e27;
+    padding: 5px 20px;
+    text-align: left;
+}
+
+.logo img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo{
+  flex: 1;
+}
+
+.logo a{
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+  background-image: url(img/3.jpeg);
+}
+
+.container {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+  color: white;
+}
+
+form {
+  background: #2a6190;
+  border-radius: 4px;
+  padding: 15px 25px;
+  width: 400px;
+  border: 1px solid #111e27;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+}
+
+input:not(#pesan, #hapus) {
+  margin-bottom: 8px;
+  width: 100%;
+  border: 1px solid black;
+  padding: 3px 5px;
+  outline: none;
+}
+
+input[disabled] {
+  cursor: not-allowed;
+  background: linear-gradient(#111e27, #2a6190);
+}
+
+.tombol {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tombol :is(#pesan, #hapus) {
+  cursor: pointer;
+}
+
+.output {
+  display: none;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px  #2a6190;
+  width: 400px;
+}
+
+.output h2 {
+  text-align: center;
+}
+
+.output.tampil {
+  display: block;
+  animation: fade 300ms;
+  color: black;
+}
+
+.output p:last-child {
+  color:  red;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.informasi {
+  margin-top: 20px;
+  color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.informasi span:first-child {
+  margin-bottom: 10px;
+  font-size: inherit;
+}
+
+.informasi span {
+  font-size: 0.95em;
+}
+
+.informasi span > span {
+  color:  #111e27;
+  font-weight: bold;
+}
